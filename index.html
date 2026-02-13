@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>For You ❤️</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div id="celebration"></div>
+<div class="background-glow"></div>
+
+<!-- INTRO SECTION -->
+<section class="intro active" id="intro">
+  <div class="content">
+    <h1>Before you continue…</h1>
+    <p>Find somewhere quiet.</p>
+    <button id="startBtn">I'm ready</button>
+  </div>
+</section>
+
+<!-- INTERACTIVE QUESTION SECTION -->
+<section class="question" id="question">
+  <div class="content">
+    <h2 id="questionText"></h2>
+
+    <div class="choices" id="choices">
+      <button class="choiceBtn">A little?</button>
+      <button class="choiceBtn">A lot?</button>
+    </div>
+  </div>
+</section>
+
+<!-- MAIN MESSAGE SECTION -->
+<section class="message" id="message">
+  <div class="content">
+    
+    <!-- Typewriter container -->
+    <div id="typewriter"></div>
+
+    <div class="signature" id="signature">
+      — Sarah Eshimiakhe ❤️
+    </div>
+
+  </div>
+</section>
+
+<!-- Background Piano -->
+<audio id="bgMusic" src="piano.mp3" loop></audio>
+
+<script src="script.js"></script>
+</body>
+</html>
