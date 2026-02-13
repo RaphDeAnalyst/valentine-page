@@ -52,20 +52,20 @@ function typeText(element, text, speed = 70) {
   });
 }
 
-/* ---------------- SPEECH ---------------- */
-function speak(text) {
-  const utterance = new SpeechSynthesisUtterance(text);
-  utterance.rate = 0.9;
-  utterance.pitch = 1;
-  utterance.voice = selectedVoice;
-  speechSynthesis.speak(utterance);
-}
+// /* ---------------- SPEECH ---------------- */
+// function speak(text) {
+//   const utterance = new SpeechSynthesisUtterance(text);
+//   utterance.rate = 0.9;
+//   utterance.pitch = 1;
+//   utterance.voice = selectedVoice;
+//   speechSynthesis.speak(utterance);
+// }
 
-// Load voices
-speechSynthesis.onvoiceschanged = () => {
-  voices = speechSynthesis.getVoices();
-  selectedVoice = voices.find(v => v.name.includes("Female")) || voices[0];
-};
+// // Load voices
+// speechSynthesis.onvoiceschanged = () => {
+//   voices = speechSynthesis.getVoices();
+//   selectedVoice = voices.find(v => v.name.includes("Female")) || voices[0];
+// };
 
 /* ---------------- MUSIC FADE ---------------- */
 function fadeInMusic() {
@@ -132,7 +132,7 @@ async function startMainMessage() {
 
   for (let i = 0; i < paragraphs.length; i++) {
     await typeText(typewriter, paragraphs[i], 70); // letter-by-letter
-    speak(paragraphs[i]);
+    // speak(paragraphs[i]);
 
     if (i === 0) triggerCelebration();
 
